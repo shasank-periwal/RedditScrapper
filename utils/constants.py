@@ -14,8 +14,8 @@ DATABASE_USERNAME = parser.get('database', 'database_username')
 DATABASE_PASSWORD = parser.get('database', 'database_password')
 
 
-INPUT_PATH = parser.get('database', 'input_path')
-OUTPUT_PATH = parser.get('database', 'output_path')
+INPUT_PATH = parser.get('file_paths', 'input_path')
+OUTPUT_PATH = parser.get('file_paths', 'output_path')
 
 POST_FIELDS = {
     'id',

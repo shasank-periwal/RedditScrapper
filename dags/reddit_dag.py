@@ -5,6 +5,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# sys.path.insert(0, '/opt/airflow')
 from pipelines.reddit_pipeline import redditpipeline
 
 
@@ -20,14 +21,14 @@ dag = DAG(
     dag_id= "etl_reddit_pipeline",
     default_args=default_args,
     catchup=False,
-    schedule_interval = '@daily',
+    schedule = '@daily',
     tags=['reddit', 'etl', 'pipeline']
 )
 
 extract = PythonOperator(
     task_id = 'reddit_extraction',
     python_callable = redditpipeline,
-    opkwargs = {
+    op_kwargs = {
         'filename': f"reddit_{file_postfix}",
         'subreddit': 'dataengineering',
         'timefilter': 'day',
