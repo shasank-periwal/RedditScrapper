@@ -1,10 +1,10 @@
 from airflow import DAG
-from airflow.providers.standard.operators.python import PythonOperator 
+from airflow.operators import PythonOperator 
 from datetime import datetime 
 import os
 import sys
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 # sys.path.insert(0, '/opt/airflow')
 from pipelines.reddit_pipeline import redditpipeline
 
