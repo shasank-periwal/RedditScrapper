@@ -11,7 +11,7 @@ from pipelines.reddit_pipeline import redditpipeline
 
 default_args = {
     'owner' : 'Shasank Periwal',
-    'retries' : 3,
+    'retries' : 1,
     'start_date': datetime(2025, 9, 13)
 }
 

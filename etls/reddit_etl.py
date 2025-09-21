@@ -1,5 +1,6 @@
 from praw import Reddit
-
+import pandas as pd
+import numpy as np
 from utils.constants import POST_FIELDS 
 
 def connect_reddit(client_id: str, secret: str, agent_name: str) -> Reddit:
@@ -21,4 +22,15 @@ def extract_post(instance: Reddit, subreddit: str, timefilter: str, limit=None):
         post_dict = vars(post)
         post = {key: post_dict[key] for key in POST_FIELDS}
         post_list.append(post)
+    
     return post_list
+
+def transform_data(df: pd.DataFrame):
+    df['created_at'] = pd.to_datetime(df["created_utc"])
+    df['over_18'] = np.where((df['over_18'] == True), True, False)
+    df['author'] = df['author'].astype(str)
+
+    return df
+
+def load_data_to_csv(data: pd.DataFrame, path: str):
+    data.to_csv(path, index=False)

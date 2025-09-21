@@ -21,7 +21,7 @@ POST_FIELDS = {
     'id',
     'name',
     'score',
-    'selftext'
+    'selftext',
     'num_comments',
     'author',
     'created_utc',
@@ -30,5 +30,5 @@ POST_FIELDS = {
     'over_18',
     'edited',
     'spoiler',
-    'stickied',
+    'stickied'
 }
