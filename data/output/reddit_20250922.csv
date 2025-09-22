@@ -1,0 +1,61 @@
+url,spoiler,selftext,title,id,over_18,author,num_comments,edited,upvote_ratio,stickied,score,created_utc,name,created_at
+https://www.reddit.com/r/dataengineering/comments/1nmw03j/ok_folks_h1b_visas_now_cost_100k_is_the_data/,False,Asking for a friend :) ,Ok folks ... H1b visa's now cost 100k .. is the data engineering role affected?,1nmw03j,False,TheOverzealousEngie,136,False,0.79,False,118,1758471009.0,t3_1nmw03j,1970-01-01 00:00:01.758471009
+https://www.reddit.com/r/dataengineering/comments/1nnhtxt/why_dont_data_engineers_unit_test_their_spark_jobs/,False,"I've often wondered why so many Data Engineers (and companies) *don't unit/integration tes*t their Spark Jobs.
+
+In my experience, the main reasons are:
+
+* Creating DataFrame fixtures (data and schemas) takes too much time .
+* Debugging jobs unit tests with multiple tables is complicated.
+* Boilerplate code is verbose and repetitive.
+
+To address these pain points, I built [https://github.com/jpgerek/pybujia (opensource)](https://github.com/jpgerek/pybujia), a toolkit that:
+
+* Lets you define table fixtures using Markdown, making DataFrame creation, debugging and readability. much easier.
+* Generalizes the boilerplate to save setup time.
+* Fits for integrations tests (the whole spark job), not just unit tests.
+* Provides helpers for common Spark testing tasks.
+
+It's made testing Spark jobs much easier for me, now I do *TDD*, and I hope it helps other Data Engineers as well.",Why Don’t Data Engineers Unit Test Their Spark Jobs?,1nnhtxt,False,jpgerek,55,False,0.85,False,53,1758533309.0,t3_1nnhtxt,1970-01-01 00:00:01.758533309
+https://www.reddit.com/r/dataengineering/comments/1nn0utp/tried_great_expectations_but_the_docs_were_shit/,False,"After a week of fiddling with Great Expectations and getting annoyed at how poor and outdated the docs were, but also how much you need to set up to get it running in the first place I find myself wondering if there is a framework or tool that is actually better for testing (and more importantly monitoring) the quality of my data. For example if a table contains x values for daterange today but x-10% tomorrow I want to know asap.
+
+But I also wonder if I actually need a framework for testing the quality of my data, these queries are pretty easy to write. A tool just seemed fun because of all the free stuff you should be getting such as easy dashboarding. But actually storing the results of my queries and publishing them into a powerBI dashboard might actually be just as easy. The issue I have with most tools anyway is that a lot of my data is in NoSQL and many don't support that outside of a pandas dataframe.
+
+As I'm writing this post I am realizing it's probably best to just write these tests myself. However, still interested to know what everyone here uses. Collibra is probably the gold standard, but in no affordable enough for us.","Tried Great Expectations but the docs were shit, but do I even need a tool?",1nn0utp,False,Verzuchter,24,False,0.89,False,29,1758482173.0,t3_1nn0utp,1970-01-01 00:00:01.758482173
+https://www.reddit.com/r/dataengineering/comments/1nmxctm/ibm_data_engineering_coursera/,False,"Has anyone heard of this course on Coursera, is it a good course to get a solid understanding of data engineering? I know it won’t get me a job, and I’m aware that they hold no weight but strictly from a knowledge standpoint I’d like to know if it’s good and up to date relevant information to learn. ",IBM Data Engineering Coursera,1nmxctm,False,No-Mobile9763,16,False,0.88,False,25,1758474177.0,t3_1nmxctm,1970-01-01 00:00:01.758474177
+https://www.reddit.com/r/dataengineering/comments/1nmyznp/which_data_catalog_product_is_the_best/,False,"Hello, so we want to implement Data Catalogue in our organization. We are still in the process of choosing and discovering. Some of the main constraints regarding this is that, the product/provider which we are going to chose should be fully on-premise and should have no AI integrated. If you have any experience regarding this, which you would chose in this case? Or any advice will be greatly apricated. 
+
+Thanks in advance :) 
+
+",Which Data Catalog Product is the best?,1nmyznp,False,M0UNTANAL0GUE,13,False,0.89,False,18,1758477938.0,t3_1nmyznp,1970-01-01 00:00:01.758477938
+https://www.reddit.com/gallery/1nn7x1v,False,"Hello everyone, I just wanted to share a project that I had to postpone working on a month or two ago because of work responsibilities. I kind of envisioned it as a combination of n8n and tableau. Basically you use nodes to connect to data sources, transform data, and connect to ML models and graphs.
+
+It has 4 main components: A visual workflow builder, the backend for the workflows, a widget-based dashboard builder, and a backend for the dashboards. Each can be hosted separately via Docker.
+
+Essentially, you can build an ETL pipeline via nodes with the visual workflow builder, connect it to graph/model widgets in the dashboard builder, and deploy the backends. You can even easily embed your widgets/dashboards into any other website by generating a token in the dashboard builder.
+
+My favorite node is the web source node which aims to (albeit not perfectly as of yet) scrape structured or unstructured data by visually clicking elements from a website loaded in an iframe.
+
+I just wanted to share this with the broader community because I think it could be really cool, especially if people contributed nodes/widgets/features based on their own interests or needs. Anyways, the repository is [https://github.com/markm39/dxsh](https://github.com/markm39/dxsh), and the landing site is [https://dxsh.io](https://dxsh.io) 
+
+Any feedback, contributions, or thoughts are greatly appreciated!",I made an open source node-based ETL repo that connects to embeddable dashboards,1nn7x1v,False,Acceptable_Ad_4425,3,False,0.85,False,12,1758499949.0,t3_1nn7x1v,1970-01-01 00:00:01.758499949
+https://www.reddit.com/r/dataengineering/comments/1nnchyu/data_extraction_salesforce_into_excel/,False,"Not sure if this is the right community to post this or not. If not, please do let me know where you think I should post it. 
+
+I will do my best to explain what it is i am trying to achieve 
+
+I have a sheet in excel which is used for data and revenue tracking of customer orders
+
+The information that gets inputted into this sheet eventually gets inputted into Salesforce. 
+
+I believe this sheet is redundant as it is the same information being entered in twice and manually, so there is room for errors. 
+
+I will mentioned that there are drop down menus within the sheet in excel, which sometimes needs to be changed to a different value depending on the information of the order. However, there are probably only a max of 6 combinations. So really I could have 6 separate sheets that the information would need to go into for each combination if needed.
+
+I am hoping there is a way to extract specific data from salesforce and input it directly into these sheets? 
+
+Typically there can be anywhere from 1 to 50 sheets that get made each day. And each sheet contains different information for each specific order. However, the information is always in the same spot within salesforce 
+
+I am hoping there is a way to this automatically where I would go through each order in sales force and push a couple of buttons to extract that data into these sheets. Or a completely automated way
+
+I think I have fully explained what it is I am trying to do. But if its not clear let me know. If I am able to achieve this, it will save me so much time and energy! 
+
+TIA",Data extraction - Salesforce into Excel,1nnchyu,False,Juicebox5150,9,False,0.6,False,1,1758513516.0,t3_1nnchyu,1970-01-01 00:00:01.758513516

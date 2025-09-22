@@ -6,6 +6,8 @@ import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 # sys.path.insert(0, '/opt/airflow')
+
+from pipelines.aws_pipeline import load_data_to_s3
 from pipelines.reddit_pipeline import redditpipeline
 
 
@@ -36,3 +38,11 @@ extract = PythonOperator(
     },
     dag = dag
 )
+
+s3_aws = PythonOperator(
+    task_id = 'local_to_aws',
+    python_callable=load_data_to_s3,
+    dag = dag
+)
+
+extract >> s3_aws
